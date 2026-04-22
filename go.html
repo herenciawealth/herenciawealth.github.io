@@ -40,11 +40,19 @@
   .benefit-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
   .benefit-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:2px;}
   .benefit-desc{font-size:11px;color:var(--gray);line-height:1.4;}
-  .video-section{max-width:700px;margin:0 auto 16px;padding:0 24px;}
+  .video-section{max-width:620px;margin:0 auto 16px;padding:0 24px;}
   .video-label{font-size:11px;font-weight:700;letter-spacing:0.1em;color:var(--orange);text-transform:uppercase;margin-bottom:10px;text-align:center;}
-  .video-wrap{position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;border:1px solid var(--border-light);background:var(--card);}
-  .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
-  .video-caption{font-size:12px;color:var(--gray);text-align:center;margin-top:8px;line-height:1.5;}
+  .video-card{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--border-light);border-radius:10px;padding:14px 16px;text-decoration:none;transition:border-color 0.2s,background 0.2s;}
+  .video-card:hover{border-color:var(--orange);background:var(--card2);}
+  .video-thumb{width:54px;height:54px;background:var(--orange);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .video-thumb::after{content:'';width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid white;margin-left:4px;}
+  .video-text{flex:1;min-width:0;}
+  .video-title{font-size:14px;font-weight:700;color:var(--white);line-height:1.35;margin-bottom:3px;}
+  .video-meta{font-size:11px;color:var(--gray);letter-spacing:0.03em;}
+  .video-meta strong{color:var(--orange);font-weight:700;}
+  .video-arrow{color:var(--gray);font-size:18px;flex-shrink:0;transition:color 0.2s,transform 0.2s;}
+  .video-card:hover .video-arrow{color:var(--orange);transform:translateX(3px);}
+  .video-caption{font-size:11px;color:var(--gray);text-align:center;margin-top:8px;line-height:1.5;}
   .form-section{max-width:620px;margin:0 auto;padding:16px 24px 80px;}
   .form-card{background:var(--card);border:1px solid var(--border-light);border-radius:12px;overflow:hidden;}
   .form-header{background:var(--orange);padding:18px 28px;text-align:center;}
@@ -147,7 +155,7 @@
   </div>
   <div class="proof-bar fu d4">
     <div class="proof-dot"></div>
-    <span class="proof-text"><strong>37,000+ people</strong> watched our 401k tax breakdown on TikTok — this is the next step</span>
+    <span class="proof-text"><strong>47,000+ people</strong> watched our 401k tax breakdown on TikTok — this is the next step</span>
     <div class="proof-dot"></div>
   </div>
   <div class="benefits fu d4">
@@ -159,11 +167,16 @@
 </section>
 
 <div class="video-section fu d5">
-  <div class="video-label">37K+ views — watch this first</div>
-  <div class="video-wrap">
-    <iframe src="https://www.tiktok.com/embed/v2/7616362407983648013" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
-  </div>
-  <p class="video-caption">Your 401k is being taxed 3 ways in retirement. The third one will cost you more than you think.</p>
+  <div class="video-label">Watch the video that started it all</div>
+  <a href="https://www.tiktok.com/@herenciawealth/video/7616362407983648013" target="_blank" rel="noopener" class="video-card">
+    <div class="video-thumb"></div>
+    <div class="video-text">
+      <div class="video-title">3 Ways Your 401k Gets Taxed In Retirement</div>
+      <div class="video-meta"><strong>47,000+ views</strong> on TikTok · @herenciawealth</div>
+    </div>
+    <div class="video-arrow">→</div>
+  </a>
+  <p class="video-caption">Opens in a new tab — the third tax will cost you more than you think.</p>
 </div>
 
 <section class="form-section">
